@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img class="logo logo-trang" src="./assets/img/logowwi.png" alt="">
+                        <img class="logo logo-den" src="./assets/img/logo_orange1.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="menu_top collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Trang chủ
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thú cưng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Diễn đàn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dịch vụ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tư vấn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="btButtonWidget  "> <a class="dedcription-btn" href="#">
+                                        <span class="name-descripeion">0235 666 777</span>
+                                        <div class="btn-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container banner-header">
+        <h1>Product Gallery With Image Zoom Example</h1>
+        <div class="show" href="https://placeimg.com/1000/1000/animals">
+            <img src="https://placeimg.com/1000/1000/animals" id="show-img">
+        </div>
+        <div class="small-img">
+            <img src="./assets/img/online_icon_right@2x.png" class="icon-left" alt="" id="prev-img">
+            <div class="small-container">
+                <div id="small-img-roll">
+                    <img src="https://placeimg.com/1000/1000/animals" class="show-small-img" alt="">
+                    <img src="https://placeimg.com/1000/1000/arch" class="show-small-img" alt="">
+                    <img src="https://placeimg.com/1000/1000/nature" class="show-small-img" alt="">
+                    <img src="https://placeimg.com/1000/1000/people" class="show-small-img" alt="">
+                    <img src="https://placeimg.com/1000/1000/tech" class="show-small-img" alt="">
+                    <img src="https://picsum.photos/1000/1000/?random" class="show-small-img" alt="">
+                </div>
+            </div>
+            <img src="./assets/img/online_icon_right@2x.png" class="icon-right" alt="" id="next-img">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="./assets/scripts/zoom-image.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+</body>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</html>
