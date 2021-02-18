@@ -1,12 +1,12 @@
 /**
  * by MonsterDuang
  */
-;(function($) {
+; (function ($) {
     /**
      * 1, 缩略图大小和父容器大小一致
      * 2, 父容器 href 属性为高清图片路径
      */
-    $.fn.zoomImage = function(paras) {
+    $.fn.zoomImage = function (paras) {
         /**
          * 默认参数
          */
@@ -23,8 +23,8 @@
 
         paras = $.extend({}, defaultParas, paras);
 
-        $(this).each(function() {
-            var self = $(this).css({position: 'relative'});
+        $(this).each(function () {
+            var self = $(this).css({ position: 'relative' });
             var selfOffset = self.offset();
             var imageW = self.width(); // 图片高度
             var imageH = self.height();
@@ -63,7 +63,7 @@
             });
 
             // 放大区域
-            var showPanel = $('<div>').css({
+            var showPanel = $('<div class="show-image">').css({
                 display: 'none',
                 position: 'absolute',
                 overflow: 'hidden',
@@ -75,22 +75,22 @@
 
             self.append(layer).append(showPanel);
 
-            self.on('mousemove', function(e) {
+            self.on('mousemove', function (e) {
                 // 鼠标相对于缩略图容器的坐标
                 var x = e.pageX - selfOffset.left;
                 var y = e.pageY - selfOffset.top;
 
-                if(x <= paras.layerW / 2) {
+                if (x <= paras.layerW / 2) {
                     x = 0;
-                }else if(x >= imageW - paras.layerW / 2) {
+                } else if (x >= imageW - paras.layerW / 2) {
                     x = imageW - paras.layerW;
-                }else {
+                } else {
                     x = x - paras.layerW / 2;
                 }
 
-                if(y < paras.layerH / 2) {
+                if (y < paras.layerH / 2) {
                     y = 0;
-                } else if(y >= imageH - paras.layerH / 2) {
+                } else if (y >= imageH - paras.layerH / 2) {
                     y = imageH - paras.layerH;
                 } else {
                     y = y - paras.layerH / 2;
@@ -105,10 +105,10 @@
                     left: -x * wTimes,
                     top: -y * hTimes
                 });
-            }).on('mouseenter', function() {
+            }).on('mouseenter', function () {
                 layer.show();
                 showPanel.show();
-            }).on('mouseleave', function() {
+            }).on('mouseleave', function () {
                 layer.hide();
                 showPanel.hide();
             });

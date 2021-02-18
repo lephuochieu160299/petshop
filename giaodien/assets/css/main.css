@@ -1,15 +1,16 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box
+
+#show-img {
+   width: 400px;
+    height: 400px;
+    border-radius: 20px;
 }
-.show{
-  width: 400px;
-  height: 400px;
+
+.show-image{
+  z-index: 1;
+  border-radius: 20px;
 }
-#show-img { width: 400px; height: 400px; }
 .small-img{
-  width: 350px;
+  width: 380px;
   height: 70px;
   margin-top: 10px;
   position: relative;
@@ -53,6 +54,7 @@
   margin-right: 6px;
   cursor: pointer;
   float: left;
+  border-radius: 7px;
 }
 .small-container .show-small-img:last-of-type{
   margin-right: 0;
