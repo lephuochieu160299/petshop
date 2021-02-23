@@ -8,254 +8,171 @@
   <title>Document</title>
 </head>
 <style>
-  @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
-  @import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
-  /*
-*  Basic Reset
-*/
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-  *,
-  *:after,
-  *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
-  /**
- * Basics Styles
- */
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    background-color: #eee;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 1.6em;
-    line-height: 1.6;
-    color: #666;
-  }
-
-  a {
-    text-decoration: none;
-    color: #3498db;
-  }
-
-  a:hover {
-    color: #2980b9;
-  }
-
-  h2 {
-    line-height: 1.2;
-    margin-bottom: 1.6rem;
-  }
-
-  .wrapper {
-    max-width: 400px;
-    margin: 50px auto;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  /**
- * Helpers
- */
-  .border-tlr-radius {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .radius {
-    border-radius: 2px;
-  }
-
-  .padding-tb {
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
-  }
-
-  .shadowDepth0 {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  }
-
-  .shadowDepth1 {
-    box-shadow:
-      0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-
-  /**
- * Card Styles
- */
-
-  .card {
-    background-color: #fff;
-    margin-bottom: 1.6rem;
-  }
-
-  .card__padding {
-    padding: 1.6rem;
-  }
-
-  .card__image {
-    min-height: 100px;
-    background-color: #eee;
-  }
-
-  .card__image img {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-  }
-
-  .card__content {
+  /* The card */
+  .card-blogpost {
     position: relative;
+    height: 450px;
+    width: 900px;
+    margin: 200px auto;
+    background-color: #FFF;
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   }
 
-  /* card meta */
-  .card__meta time {
-    font-size: 1.5rem;
-    color: #bbb;
-    margin-left: 0.8rem;
-  }
-
-  /* card article */
-  .card__article a {
-    text-decoration: none;
-    color: #444;
-    transition: all 0.5s ease;
-  }
-
-  .card__article a:hover {
-    color: #2980b9;
-  }
-
-  /* card action */
-  .card__action {
+  /* Image on the left side */
+  .card-blogpost .thumbnail-blog {
+    float: left;
+    position: relative;
+    left: 30px;
+    top: -30px;
+    height: 320px;
+    width: 530px;
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
     overflow: hidden;
-    padding-right: 1.6rem;
-    padding-left: 1.6rem;
-    padding-bottom: 1.6rem;
-  }
-  .card__author img,
-  .card__author-content {
-    display: inline-block;
-    vertical-align: middle;
   }
 
-  .card__author img {
-    border-radius: 50%;
-    margin-right: 0.6em;
-  }
-
-  .card__share {
-    float: right;
-    position: relative;
-    margin-top: -42px;
-  }
-
-  .card__social {
+  /*object-fit: cover;*/
+  /*object-position: center;*/
+  .card-blogpost img.left {
     position: absolute;
-    top: 0;
-    right: 0;
-    visibility: hidden;
-    width: 160px;
-    transform: translateZ(0);
-    transform: translateX(0px);
-    transition: transform 0.35s ease;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
-  .card__social--active {
-    visibility: visible;
-    /*z-index: 3;*/
-    transform: translateZ(0);
-    transform: translateX(-48px);
-    transition: transform 0.35s ease;
+  /* Right side of the card */
+  .card-blogpost .right {
+    margin-left: 590px;
+    margin-right: 20px;
   }
 
-  .share-toggle {
-    z-index: 2;
+  .card-blogpost  h1 {
+    padding-top: 15px;
+    font-size: 1.3rem;
+    color: #4B4B4B;
   }
 
-  .share-toggle:before {
-    content: "\f1e0";
-    font-family: 'FontAwesome';
-    color: #3498db;
+  .card-blogpost .author {
+    background-color: #9ECAFF;
+    height: 30px;
+    width: 110px;
+    border-radius: 20px;
   }
 
-  .share-toggle.share-expanded:before {
-    content: "\f00d";
+  .card-blogpost .author>img {
+    padding-top: 5px;
+    margin-left: 10px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
   }
 
-  .share-icon {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
+  .card-blogpost h2 {
+    padding-top: 8px;
+    margin-right: 6px;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+
+  .card-blogpost .separator {
+    margin-top: 10px;
+    border: 1px solid #C3C3C3;
+  }
+
+  .card-blogpost p {
+    text-align: justify;
+    padding-top: 10px;
+    font-size: 0.95rem;
+    line-height: 150%;
+    color: #4B4B4B;
+  }
+
+  /* DATE of release*/
+  .card-blogpost h5 {
+    position: absolute;
+    left: 30px;
+    bottom: -120px;
+    font-size: 6rem;
+    color: #C3C3C3;
+  }
+
+  .card-blogpost h6 {
+    position: absolute;
+    left: 30px;
+    bottom: -55px;
+    font-size: 2rem;
+    color: #C3C3C3;
+  }
+
+  /* Those futur buttons */
+  .card-blogpost ul {
+    margin-left: 250px;
+  }
+
+  .card-blogpost li {
+    display: inline;
+    list-style: none;
+    padding-right: 40px;
+    color: #7B7B7B;
+  }
+
+  /* Floating action button */
+  .card-blogpost .fab {
+    position: absolute;
+    right: 50px;
+    bottom: -40px;
+    box-sizing: border-box;
+    padding-top: 18px;
+    background-color: #1875D0;
+    width: 80px;
+    height: 80px;
+    color: white;
     text-align: center;
     border-radius: 50%;
-    background-color: #fff;
-    transition: all 0.3s ease;
-    outline: 0;
-
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.12),
-      0 2px 4px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
   }
-
-  .share-icon:hover,
-  .share-icon:focus {
-    box-shadow:
-      0 3px 6px rgba(0, 0, 0, 0.12),
-      0 3px 6px rgba(0, 0, 0, 0.24);
-
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
 </style>
 
 <body>
-  <div class="wrapper">
-    <div class="card radius shadowDepth1">
-      <div class="card__image border-tlr-radius">
-        <img src="./assets/img/blog1.jpg" alt="image" class="border-tlr-radius">
-      </div>
-      <div class="card__content card__padding">
-        <div class="card__share">
-          <a id="share" class="share-toggle share-icon" href="#"></a>
-        </div>
-        <div class="card__meta">
-          <a href="#">Web Design</a>
-          <time>17th March</time>
-        </div>
-        <article class="card__article">
-          <h2><a href="#">Material Design Card - For Blog Post Article</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
-        </article>
-      </div>
 
-      <div class="card__action">
-        <div class="card__author">
-          <img src="http://lorempixel.com/40/40/sports/" alt="user">
-          <div class="card__author-content">
-            By <a href="#">John Doe</a>
-          </div>
-        </div>
-      </div>
+  <div class="card-blogpost">
+    <div class="thumbnail-blog"><img class="left"
+        src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg" />
     </div>
-
+    <div class="right">
+      <h1>Why you Need More Magnesium in Your Daily Diet</h1>
+      <div class="author"><img src="https://randomuser.me/api/portraits/men/95.jpg" />
+        <h2>Igor MARTY</h2>
+      </div>
+      <div class="separator"></div>
+      <p>Magnesium is one of the six essential macro-minerals that is required by the body for energy production and
+        synthesis of protein and enzymes. It contributes to the development of bones and most importantly it is
+        responsible for synthesis of your DNA and RNA. A new report that has appeared in theBritish Journal of Cancer,
+        gives you another reason to add more magnesium to your diet...</p>
+    </div>
+    <h5>12</h5>
+    <h6>JANUARY</h6>
+    <ul>
+      <li><i class="fa fa-eye fa-2x"></i></li>
+      <li><i class="fa fa-heart-o fa-2x"></i></li>
+      <li><i class="fa fa-envelope-o fa-2x"></i></li>
+      <li><i class="fa fa-share-alt fa-2x"></i></li>
+    </ul>
+    <div class="fab"><i class="fa fa-arrow-down fa-3x"> </i></div>
   </div>
 </body>
-
 
 </html>
