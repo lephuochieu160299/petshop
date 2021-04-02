@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<script>
+    //=============================================== Menu General 
+    $(document).ready(function() {
+        //GLOBALS
+        var nav_menu = $('.nav-menu-general');
+        var nav_menu_wrap = $('.nav-menu-wrap-general');
+        var nav_menu_background = $('.nav-menu-background-general');
+        //toggle the active states
+
+        function toggle_menu_general() {
+            // remove menu khác
+            $(".nav-menu-wrap-profile").removeClass("active").delay(100).queue(function(next) {
+                $(".nav-menu-background-profile").removeClass("active");
+                next();
+            });
+            $(".nav-menu-wrap-home").removeClass("active").delay(100).queue(function(next) {
+                $(".nav-menu-background-home").removeClass("active");
+                next();
+            });
+            nav_menu_wrap.toggleClass('active');
+            nav_menu_background.toggleClass('active');
+        }
+
+        //toggling activate state when interacting with elements
+        $('.nav-menu-toggle-general, .nav-menu-background-general').on('click', function() {
+            toggle_menu_general();
+        });
+    });
+</script>
+
+<body>
+
+    <!-- menumobile of general -->
+    <div class="web-container-general">
+        <!--Main nav menu -->
+        <nav class="nav-menu-wrap-general">
+            <div class="nav-menu-general menu-general menu-mobile-general">
+                <div class="body-menumobile-general">
+
+                    <div class="td-menu-socials-wrap">
+                        <div class="td-menu-socials">
+                            <span class="td-social-icon-wrap"> <a target="_blank"  href="#" > <i class="fab fa-facebook-f"></i> </a> </span>
+                            <span class="td-social-icon-wrap"> <a target="_blank"  href="#"  ><i class="fab fa-twitter"></i></a> </span>
+                            <span class="td-social-icon-wrap"> <a target="_blank"  href="#"  ><i class="fab fa-instagram"></i></a> </span>
+                            <span class="td-social-icon-wrap"> <a target="_blank"  href="#"  ><i class="fab fa-linkedin-in"></i></a> </span>
+                            <span class="td-social-icon-wrap"> <a target="_blank"  href="#"  ><i class="fab fa-pinterest-p"></i></a> </span>
+                        </div>
+                        <div class="td-mobile-close nav-menu-toggle-general"> <a href="#"><i class="fa fa-times toggle"></i></a></div>
+                    </div>
+                    <div class="row ml-3 mt-3 mb-3">
+                        <a href="#"><img class="w-50" src="http://vpet.vn/templates/client/assets/img/logo-trang.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="topic-home">
+                        <li>
+                            <a href="#"><img src="./assets/img/icon-home.png" alt=""> Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="./assets/img/icon-gioithieu.png">Giới thiệu</a>
+                        </li>
+                        <li class='sub-menu-vertical'>
+
+                            <a href='#settings'><img src="./assets/img/icon-dog.png"> Kênh chó
+                                <div class='fa fa-caret-right right'></div>
+                            </a>
+                            <ul class="vertical-menu-mobile">
+                                <li><a href='#settings'>Chó Alaska</a></li>
+                                <li><a href='#settings'>Chó Bắc Hà</a></li>
+                                <li><a href='#settings'>Chó Beagle</a></li>
+                                <li><a href='#settings'>Chó Corgi</a></li>
+                                <li><a href='#settings'>Chó Chihuahua</a></li>
+                                <li><a href='#settings'>Chó Dosg</a></li>
+                                <li><a href='#settings'>Chó Chihuahua</a></li>
+                            </ul>
+
+                        </li>
+                        <li class='sub-menu-vertical'>
+                            <a href='#settings'><img src="./assets/img/icon-meo.png" alt=""> Kênh mèo
+                                <div class='fa fa-caret-right right'></div>
+                            </a>
+                            <ul class="vertical-menu-mobile">
+                                <li><a href='#settings'>Mèo Anh lông dài</a></li>
+                                <li><a href='#settings'>Mèo Ai Cập</a></li>
+                                <li><a href='#settings'>Mèo Ba Tư</a></li>
+                                <li><a href='#settings'>Mèo Mướp</a></li>
+                                <li><a href='#settings'>Mèo Nga</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="./assets/img/icon-blog.png">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="./assets/img/icon-lienhe.png"> Liên hệ</a>
+                        </li>
+
+                    </ul>
+
+                    <a class="dedcription-mobile btn " href="#">
+                        <span class="name-descripeion">0235 666 777</span>
+
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-menu-background-general">
+        </div>
+    </div>
+    <!-- end -->
+
+    <!-- Header menu-->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <button class="navbar-toggler border-1">
+                    <span> <div class=" nav-menu-toggle-general icon-menumobile">
+                      <i class="fa fa-bars toggle"></i>
+                    </div></span>
+                     </button>
+
+                    <a class="navbar-brand" href="#"><img class="logo logo-trang" src="http://vpet.vn/templates/client/assets/img/logo-trang.png" alt="">
+                        <img class="logo logo-den" src="http://vpet.vn/templates/client/assets/img/logo-den.png" alt=""></a>
+
+                    <button class="navbar-toggler  border-1" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>
+                       <div class=" icon-menumobile">
+                      <i class="fas fa-search"></i>
+                    </div></span>
+                    </button>
+                    <!-- 
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button> -->
+
+                    <div id="navbarResponsive" class="collapse">
+                        <div class="input-group">
+                            <div class="form-outline">
+                                <input type="search" id="search-bar" class="form-control" placeholder="Tôi có thể giúp gì cho bạn hôm nay?" />
+                            </div>
+                            <button type="button " class="btn btn-primary search-icon">
+                             <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="menu_top collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Trang chủ </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thú cưng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Diễn đàn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dịch vụ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tư vấn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="btButtonWidget  ">
+                                    <a class="dedcription-btn" href="#">
+                                        <span class="name-descripeion">0235 666 777</span>
+                                        <div class="btn-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end -->
+    <!-- Baner Bộ lọc -->
+    <section class="hero">
+        <div class=" container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 col-12 text-left content-baner">
+                    <!-- <span class="bt_bb_image"><img
+                src="http://pawsitive.bold-themes.com/buddy/wp-content/uploads/sites/2/2019/07/hero_image_01.png"></span> -->
+                    <h1><span class="bt_bb_headline_content"><span><strong>Tình yêu thú cưng</strong> đến mỗi gia
+                đình...</span></span>
+                    </h1>
+                    <br>
+                    <p class="lead">Mạng xã hội của những người yêu thú cưng</p>
+                    <div class="tab-content tabs-header-one">
+                        <div class="tab-pane active" id="tabs-5" role="tabpanel">
+                            <div class="bt_bb_content_slider_item_content ">
+                                <div class="bt_bb_service">
+                                    <div class="bt_bb_service_colored_icon">
+                                        <a href="#" target="_self" tabindex="0">
+                                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #ffa000;
+                            }
+
+                            .cls-2 {
+                              fill: #282828;
+                            }
+                          </style>
+                        </defs>
+                        <title>Icons-Pawsitive</title>
+                        <path class="cls-1"
+                          d="M45.67,49h7.84A11.75,11.75,0,0,1,65.26,60.75v23.5a0,0,0,0,1,0,0H33.93a0,0,0,0,1,0,0V60.75A11.75,11.75,0,0,1,45.67,49Z">
+                        </path>
+                        <path class="cls-2"
+                          d="M15.64,49.07l2.69-2.58V83.33A6.67,6.67,0,0,0,25,90H75a6.67,6.67,0,0,0,6.67-6.67V46.48l2.69,2.59A3.33,3.33,0,1,0,89,44.26l-8.28-8h0L55.89,12.44a8.32,8.32,0,0,0-11.73,0L19.32,36.29h0l-8.29,8a3.33,3.33,0,1,0,4.62,4.8Zm46,34.27H38.33V60A6.67,6.67,0,0,1,45,53.33H55A6.67,6.67,0,0,1,61.67,60ZM48.82,17.16a1.68,1.68,0,0,1,2.4,0L75,40.07V83.33H68.33V60A13.35,13.35,0,0,0,55,46.67H45A13.35,13.35,0,0,0,31.67,60V83.33H25V40.07Zm0,0">
+                        </path>
+                      </svg>
+                                        </a>
+                                    </div>
+                                    <div class="bt_bb_service_content">
+                                        <div class="bt_bb_service_content_title"><a href="#" target="_self" tabindex="0">Dành cho Cún</a>
+                                        </div>
+                                        <div class="bt_bb_service_content_text">Bán vật nuôi ngắn hạn và dài hạn. Chuồng chó sang trọng, tập thể dục.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-6" role="tabpanel">
+                            <div class="bt_bb_content_slider_item_content ">
+                                <div class="bt_bb_service">
+                                    <div class="bt_bb_service_colored_icon"><a href="#" target="_self" tabindex="0"><svg
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #ffa000;
+                            }
+
+                            .cls-2 {
+                              fill: #282828;
+                            }
+                          </style>
+                        </defs>
+                        <title>Icons-Pawsitive</title>
+                        <path class="cls-1"
+                          d="M79.92,28.24,77.15,17.13a2.53,2.53,0,0,0-2.46-1.92h0a2.53,2.53,0,0,0-2.11,1.13l-5.36,8a2.53,2.53,0,0,1-1.54,1.06l-6.56,1.51S50,25.32,50,43c0,11.67,11.59,16.92,18.26,15.25S80,50.6,80,47.91V28.85A2.53,2.53,0,0,0,79.92,28.24Z">
+                        </path>
+                        <path class="cls-2"
+                          d="M44.07,74.44a8,8,0,0,0,5.5-2.2,8,8,0,0,0,12.88-2.69,2.5,2.5,0,1,0-4.61-1.95,3,3,0,0,1-5.77-1.17A2.25,2.25,0,0,0,52,66a5,5,0,0,0,1.19-1.18l2-2.82a3.47,3.47,0,0,0-3-5.84H46.91a3.47,3.47,0,0,0-3,5.84l2,2.82A5.06,5.06,0,0,0,47.11,66a2.22,2.22,0,0,0,0,.41,3,3,0,0,1-5.77,1.17,2.5,2.5,0,1,0-4.61,1.95A8,8,0,0,0,44.07,74.44Z">
+                        </path>
+                        <circle class="cls-2" cx="37.47" cy="46.36" r="5.1"></circle>
+                        <circle class="cls-2" cx="61.68" cy="46.36" r="5.1"></circle>
+                        <path class="cls-2"
+                          d="M90.29,66.69l-8.4-2.87A34.07,34.07,0,0,0,83.23,58l6.37-1.69A3.26,3.26,0,1,0,87.93,50l-4.44,1.18a33.91,33.91,0,0,0-1.16-7,26.74,26.74,0,0,1-1-7.18V18.1a5.31,5.31,0,0,0-3.32-5A5.4,5.4,0,0,0,76,12.7a5.33,5.33,0,0,0-3.77,1.57c-2.26,2.24-5.71,5.66-8.52,8.48a65.35,65.35,0,0,0-14-1.24,66.3,66.3,0,0,0-14.15,1.25c-2.82-2.82-6.27-6.25-8.53-8.49a5.33,5.33,0,0,0-3.77-1.57,5.41,5.41,0,0,0-2.09.42,5.31,5.31,0,0,0-3.32,5V37a28.63,28.63,0,0,1-1,7.44A33.81,33.81,0,0,0,15.67,51l-3.6-1a3.26,3.26,0,1,0-1.67,6.3l5.49,1.45a33.5,33.5,0,0,0,1.47,6.31L9.71,66.69a3.26,3.26,0,1,0,2.11,6.16L20,70.05A34,34,0,0,0,45.91,87.11a35.45,35.45,0,0,0,3.69.19A33.9,33.9,0,0,0,79.27,69.81l8.9,3a3.26,3.26,0,0,0,2.11-6.16ZM76.41,59.81c-.16.66-.34,1.31-.55,1.95l-3-1Zm-49.31.93L23.38,62c-.28-.85-.52-1.65-.7-2.45Zm12.32,2.67a3.3,3.3,0,0,0,.49-.23l.19-.12.29-.21.18-.16a3.7,3.7,0,0,0,.27-.3l.11-.14a3.76,3.76,0,0,0,.24-.38l.07-.12a3.77,3.77,0,0,0,.17-.46l0-.15a3.21,3.21,0,0,0,.09-.59,1.62,1.62,0,0,0,0-.19l-.3,0,.29-.16a2.42,2.42,0,0,0,0-.3,4.32,4.32,0,0,0-.11-.47,1,1,0,0,0,0-.16,3.23,3.23,0,0,0-.26-.57,2.55,2.55,0,0,0-.2-.29l-.24.18.16-.29-.1-.13a2.71,2.71,0,0,0-.25-.24l-.2.23.11-.31-.12-.11a4,4,0,0,0-.43-.27l-.11-.06a3.23,3.23,0,0,0-.61-.23L22,52.65a27.52,27.52,0,0,1,.92-6.53A35,35,0,0,0,24.16,37V20.47c2.22,2.21,5,4.94,7.22,7.19a5.41,5.41,0,0,0,3.8,1.58,5.25,5.25,0,0,0,1.43-.2c2.55-.72,7.54-1.17,13-1.17S60,28.33,62.53,29a5.23,5.23,0,0,0,1.45.2,5.41,5.41,0,0,0,3.8-1.58c2.23-2.23,5-5,7.21-7.19V37a33.12,33.12,0,0,0,1.19,8.89,27.5,27.5,0,0,1,1,7L60.83,57.2a3.28,3.28,0,0,0-.59.22,2.75,2.75,0,0,0-.31.19l.17.25-.26-.19-.13.08a2.42,2.42,0,0,0-.23.2l.21.21-.32-.11-.13.13a2.13,2.13,0,0,0-.16.21l.25.17-.34,0a1.64,1.64,0,0,0-.12.18,3.36,3.36,0,0,0-.27.59,2.29,2.29,0,0,0-.06.24,3,3,0,0,0-.09.38,2.16,2.16,0,0,0,0,.29h.3l-.3.15a1.59,1.59,0,0,0,0,.2,3.73,3.73,0,0,0,.1.63l0,.13a3.37,3.37,0,0,0,.16.43l.09.17a3.33,3.33,0,0,0,.21.34l.14.17a3.31,3.31,0,0,0,.25.27l.17.15a3.45,3.45,0,0,0,.34.25l.15.09a3.69,3.69,0,0,0,.54.25l12.5,4.28a27.55,27.55,0,0,1-5.08,6.13,27.15,27.15,0,0,1-18.44,7.09,29.25,29.25,0,0,1-3-.16A27.71,27.71,0,0,1,26.17,67.95Z">
+                        </path>
+                      </svg></a></div>
+                                    <div class="bt_bb_service_content">
+                                        <div class="bt_bb_service_content_title"><a href="#" target="_self" tabindex="0">Dành cho Mèo</a>
+                                        </div>
+                                        <div class="bt_bb_service_content_text">Thú cưng sẽ tiếp xúc với nhiều tương tác của con người, thời gian bên ngoài.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-7" role="tabpanel">
+                            <div class="bt_bb_content_slider_item_content">
+                                <div class="bt_bb_service">
+                                    <div class="bt_bb_service_colored_icon"><a href="#" target="_self" tabindex="0"><svg
+                        data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #fff;
+                            }
+
+                            .cls-2 {
+                              fill: #ffa000;
+                            }
+                          </style>
+                        </defs>
+                        <title>Icons-Pawsitive</title>
+                        <path class="cls-1"
+                          d="M30.65,89.7a9.7,9.7,0,0,1-7-2.95,36.3,36.3,0,0,1-9.93-22.64V64l-.14-.08a6.37,6.37,0,0,1-3.3-5.54v-5A6.37,6.37,0,0,1,16.67,47h2.12l0-.34A13.2,13.2,0,0,1,18.63,45,13,13,0,0,1,29.45,32.17l.16,0,.07-.14a11.32,11.32,0,0,1,20-1.31l.12.2.22-.07a11.42,11.42,0,0,1,3.33-.52,11.29,11.29,0,0,1,8.07,3.41l.16.17.2-.12A13,13,0,0,1,81.37,45a13.2,13.2,0,0,1-.11,1.63l0,.34h2.12a6.37,6.37,0,0,1,6.37,6.37v5a6.36,6.36,0,0,1-3.3,5.54l-.14.08v.16a36.3,36.3,0,0,1-9.92,22.63,9.72,9.72,0,0,1-7,3ZM19.9,65a29.91,29.91,0,0,0,8.16,17.52,3.6,3.6,0,0,0,2.59,1.08h38.7a3.6,3.6,0,0,0,2.6-1.09A29.88,29.88,0,0,0,80.1,65l0-.33H19.87Zm-3.54-6.4H83.63V53H16.37ZM31.67,38a7,7,0,0,0-6.75,8.71L25,47H75l.06-.23A7,7,0,0,0,68.33,38a6.93,6.93,0,0,0-5.13,2.28,3,3,0,0,1-.27.24l-.11.1-.09.08-.19.11a3,3,0,0,1-.34.2L62,41.1a3,3,0,0,1-.4.13l-.19,0-.13,0-.27,0h-.21a2.88,2.88,0,0,1-.6-.09l-.18,0a3,3,0,0,1-.68-.31l-.14-.1a3,3,0,0,1-.3-.22l-.08-.08-.08-.09-.15-.17a3,3,0,0,1-.42-.66,5.33,5.33,0,0,0-4.86-3.17,5.26,5.26,0,0,0-3.28,1.13l-.1.06-.28.18-.25.13-.27.1-.3.09-.13,0h-.16l-.26,0h-.13l-.42,0L47.42,38,47.21,38a3,3,0,0,1-.32-.14l-.18-.08a3.11,3.11,0,0,1-.46-.31l-.09-.09a2.83,2.83,0,0,1-.31-.32l-.11-.15a2.92,2.92,0,0,1-.21-.32l-.1-.2c0-.1-.08-.2-.12-.31s-.05-.17-.07-.25l0-.12a5.3,5.3,0,0,0-10.39-.07,3,3,0,0,1-.18.58l-.05.1a3,3,0,0,1-.23.42l-.09.11-.14.17a1.74,1.74,0,0,1-.15.17l-.13.11a3.17,3.17,0,0,1-.32.26,3.06,3.06,0,0,1-1.39.48L32,38l-.16,0Z">
+                        </path>
+                        <rect class="cls-2" x="16.37" y="53.03" width="67.27" height="5.6"></rect>
+                        <circle class="cls-1" cx="58.33" cy="21.67" r="4.7"></circle>
+                        <circle class="cls-1" cx="71.67" cy="15" r="4.7"></circle>
+                      </svg></a></div>
+                                    <div class="bt_bb_service_content">
+                                        <div class="bt_bb_service_content_title"><a href="#" target="_self" tabindex="0">Pet Spa</a></div>
+                                        <div class="bt_bb_service_content_text">Chúng tôi có nhiều loại dầu gội chất lượng cũng như dầu gội thuốc.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs nav-silder" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-5" role="tab"><i
+                    class="fas fa-dot-circle"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab"><i class="fas fa-dot-circle"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab"><i class="fas fa-dot-circle"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <a href="#">
+                        <div class="css-square wobble-horizontal"><img class="w-50" src="./assets/img/book_now.png" alt=""></div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 text-left">
+                    <div class="search_catagory">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"><i class="fas fa-paw"></i>
+                  Chó</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"><i class="fas fa-paw"></i> Mèo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"><i class="fas fa-paw"></i> Thú cưng
+                  khác</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab"><i class="fas fa-paw"></i> Nơi trú ẩn &
+                  Cứu hộ</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-8 form_search pt-2">
+                                        <form class="needs-validation" novalidate="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">Nguồn gốc </label>
+                                                    <input type="text" class="form-control" id="address2" placeholder="Nguồn gốc của Pet">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Tuổi</label>
+                                                    <select class="custom-select">
+                            <option selected>Tất cả</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Giống thú cưng</label>
+                                                    <select class="custom-select">
+                            <option selected>Tất cả</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                            </div>
+                                            <hr style="border-top:1px  solid #fff;" class="my-4">
+                                            <button class="w-100 btn btn-primary btn-lg" type="submit"><i class="fas fa-search"></i> Tìm kiếm
+                      </button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-4 img_search">
+                                        <img class="img-search1" src="./assets/img/dog.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-8 form_search pt-2">
+                                        <form class="needs-validation" novalidate="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">Location <span
+                              class="text-muted">(Optional)</span></label>
+                                                    <input type="text" class="form-control" id="address2" placeholder="Location Pet">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Age</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Breed</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                            </div>
+                                            <hr class="my-4">
+                                            <button class="w-100 btn btn-primary btn-lg" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-4 img_search">
+                                        <img class="img-search2" src="./assets/img/Homepage-Cat.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-8 form_search pt-2">
+                                        <form class="needs-validation" novalidate="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">Location <span
+                              class="text-muted">(Optional)</span></label>
+                                                    <input type="text" class="form-control" id="address2" placeholder="Location Pet">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Age</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Breed</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                            </div>
+                                            <hr class="my-4">
+                                            <button class="w-100 btn btn-primary btn-lg" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-4 img_search">
+                                        <img class="img-search3" src="./assets/img/Homepage-OtherPets-New.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-4" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-8 form_search pt-2 form_search">
+                                        <form class="needs-validation" novalidate="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">Location <span
+                              class="text-muted">(Optional)</span></label>
+                                                    <input type="text" class="form-control" id="address2" placeholder="Location Pet">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Age</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="zip" class="form-label">Breed</label>
+                                                    <select class="custom-select">
+                            <option selected>Any</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                                                </div>
+                                            </div>
+                                            <hr class="my-4">
+                                            <button class="w-100 btn btn-primary btn-lg" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-4 img_search">
+                                        <img class="img-search4" src="./assets/img/Homepage-ShelterRescue-New.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-form__rehome-block">
+                            <h4 class="h4__heading h4--bold">Nơi để bạn kết nối với những người có cùng mối quan tâm!</h4>
+                            <p class="h6__heading h6--light  m-space-b--tiny">Tìm kiếm thông tin, sản phẩm, dịch vụ, chia sẻ kinh nghiệm chăm sóc <b>thú cưng</b> . Hay đơn giản là chỉ để bạn khoe <b>“boss”</b> của mình với cả thế giới!
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <figure class="r-0 b-0 l-0 m-0"><svg preserveAspectRatio="none" x="0px" y="0px" width="100%" height="85px" viewBox="0 0 1920 107.7" xml:space="preserve" class="w-100 h-100 svg" style="margin-bottom: -8px;">
+        <style type="text/css">
+          .wave-9-bottom-0 {
+            fill: #fff;
+          }
+
+          .wave-9-bottom-1 {
+            fill: #fff;
+          }
+        </style>
+        <path class="wave-9-bottom-0 fill-white" d="M0,107.7V69.8c0,0,451-54.7,960-5.4S1920,0,1920,0v107.7H0z"></path>
+        <path class="wave-9-bottom-1 fill-white" opacity="0.3"
+          d="M0,107.7v-81c0,0,316.2-8.9,646.1,54.5s794.7-114.1,1273.9-38v64.5H0z"></path>
+      </svg></figure>
+    </section>
+    <!-- end -->
+    <div class="container position-relative z-index-2">
+        <div class="row icon-banner justify-content-center">
+            <div class="col-4 col-lg-2 mt-n7">
+                <div class="bg-light u-lg-avatar shadow-sm rounded-circle p-2 mx-auto"><img class="img-fluid lazy" alt="Birds" src="https://d6cpoqt24b96v.cloudfront.net/pety/bird.png"></div>
+            </div>
+            <div class="col-lg-2 d-none d-lg-inline-block mt-lg-n8">
+                <div class="bg-light u-xl-avatar shadow-sm rounded-circle p-4 mx-auto"><img class="img-fluid lazy" alt="Cats" src="https://d6cpoqt24b96v.cloudfront.net/pety/hug.png"></div>
+            </div>
+            <div class="col-4 col-lg-2 mt-n4">
+                <div class="bg-light u-lg-avatar shadow-sm rounded-circle p-4 mx-auto"><img class="img-fluid lazy" alt="Dogs" src="https://d6cpoqt24b96v.cloudfront.net/pety/dog.png"></div>
+            </div>
+            <div class="col-4 col-lg-2  mt-n7">
+                <div class="bg-light u-lg-avatar shadow-sm rounded-circle p-2 mx-auto"><img class="img-fluid lazy" alt="Other Dogs" src="https://d6cpoqt24b96v.cloudfront.net/pety/sleepy-dog.png"></div>
+            </div>
+            <div class="col-lg-2 mt-lg-n8 d-none d-lg-inline-block">
+                <div class="bg-light u-xl-avatar shadow-sm rounded-circle p-4 mx-auto"><img class="img-fluid lazy w-80 h-80" alt="Pet Owners" src="https://d6cpoqt24b96v.cloudfront.net/pety/other.png"></div>
+            </div>
+            <div class="col-3 col-lg-2 d-none d-lg-inline-block">
+                <div class="bg-light u-lg-avatar shadow-sm rounded-circle p-4 mx-auto"><img class="img-fluid lazy w-80 h-80" alt="Other Cats" src="https://d6cpoqt24b96v.cloudfront.net/pety/cat.png"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Giới thiệu -->
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class=" col-lg-6">
+                <h3 class="text-primary">Tham gia Pety bạn và thú cưng sẽ có những trải nghiệm thú vị</h3>
+                <div class="pt-4 mb-4 media"><svg x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve" class="mr-4 svg" style="width: 50px; height: 50px;">
+            <style type="text/css">
+              .icon-45-0 {
+                fill: #BDC5D1;
+              }
+
+              .icon-45-1 {
+                fill: #377DFF;
+              }
+
+              .icon-45-2 {
+                fill: #FFFFFF;
+              }
+
+              .icon-45-3 {
+                fill: none;
+                stroke: #BDC5D1;
+              }
+            </style>
+            <path class="icon-45-0 fill-gray-400" opacity="0.5"
+              d="M117.8,120H74.6c-1.2,0-2.2-1-2.2-2.2V74.6c0-1.2,1-2.2,2.2-2.2h43.2c1.2,0,2.2,1,2.2,2.2v43.2 C120,119,119,120,117.8,120z">
+            </path>
+            <path class="icon-45-1 fill-primary"
+              d="M107.5,111H67.2c-1.9,0-3.4-1.5-3.4-3.4V67.2c0-1.9,1.5-3.4,3.4-3.4h40.3c1.9,0,3.4,1.5,3.4,3.4v40.3 C110.9,109.5,109.4,111,107.5,111z">
+            </path>
+            <path class="icon-45-2 fill-white" opacity="0.5"
+              d="M95.5,97.3H84c-0.9,0-1.7-0.8-1.7-1.7V84.1c0-0.9,0.8-1.7,1.7-1.7h11.5c0.9,0,1.7,0.8,1.7,1.7v11.5 C97.2,96.5,96.5,97.3,95.5,97.3z">
+            </path>
+            <path class="icon-45-2 fill-white"
+              d="M90.6,92.4H79.2c-0.9,0-1.7-0.8-1.7-1.7V79.2c0-0.9,0.8-1.7,1.7-1.7h11.5c0.9,0,1.7,0.8,1.7,1.7v11.5 C92.3,91.6,91.6,92.4,90.6,92.4z">
+            </path>
+            <circle class="icon-45-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" cx="28.8" cy="91.4" r="26.8"></circle>
+            <circle class="icon-45-0 fill-gray-400" opacity="0.5" cx="31.3" cy="94.5" r="11"></circle>
+            <circle class="icon-45-1 fill-primary" cx="26.3" cy="88.3" r="11"></circle>
+            <path class="icon-45-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M61.1,49.2l27.1-47c0.5-0.8,1.7-0.8,2.2,0l27.1,47c0.5,0.8-0.1,1.9-1.1,1.9H62.2C61.2,51.1,60.6,50,61.1,49.2z">
+            </path>
+            <path class="icon-45-0 fill-gray-400" opacity="0.5"
+              d="M86.1,41.2l8.1-14c0.3-0.5,1-0.5,1.3,0l8.1,14c0.3,0.5-0.1,1.1-0.6,1.1H86.7C86.1,42.3,85.8,41.7,86.1,41.2z">
+            </path>
+            <path class="icon-45-1 fill-primary"
+              d="M79.3,36.5l8.1-14c0.3-0.5,1-0.5,1.3,0l8.1,14c0.3,0.5-0.1,1.1-0.6,1.1H80C79.4,37.6,79.1,37,79.3,36.5z">
+            </path>
+          </svg>
+                    <div class="media-body">
+                        <div class="b h5 font-weight-semi-bold">Cá nhân hóa</div>
+                        <p class="text-muted font-weight-medium">Đăng tải những hình ảnh hoặc video ghi lại những khoảnh khắc vui vẻ cùng nhau</p>
+                    </div>
+                </div>
+                <div class="mb-4 media"><svg x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve" class="mr-4 svg" style="width: 50px; height: 50px;">
+            <style type="text/css">
+              .icon-4-0 {
+                fill: none;
+                stroke: #377DFF;
+              }
+
+              .icon-4-1 {
+                fill: none;
+                stroke: #BDC5D1;
+              }
+
+              .icon-4-2 {
+                fill: none;
+                stroke: #FFFFFF;
+              }
+
+              .icon-4-3 {
+                fill: #BDC5D1;
+              }
+
+              .icon-4-4 {
+                fill: #377DFF;
+              }
+            </style>
+            <path class="icon-4-0 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M27.8,37.1c0,1.5-1.3,2.8-2.8,2.8c-1.5,0-2.8-1.2-2.8-2.8c0-1.5,1.3-2.8,2.8-2.8C26.6,34.3,27.8,35.5,27.8,37.1 z">
+            </path>
+            <path class="icon-4-1 fill-none stroke-gray-400" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M41,37.1c0,1.5-1.2,2.8-2.8,2.8c-1.5,0-2.8-1.2-2.8-2.8c0-1.5,1.2-2.8,2.8-2.8C39.8,34.3,41,35.5,41,37.1z">
+            </path>
+            <path class="icon-4-1 fill-none stroke-gray-400" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M54.2,37.1c0,1.5-1.3,2.8-2.8,2.8c-1.5,0-2.8-1.2-2.8-2.8c0-1.5,1.3-2.8,2.8-2.8C53,34.3,54.2,35.5,54.2,37.1z">
+            </path>
+            <path class="icon-4-1 fill-none stroke-gray-400" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" d="M105.8,61.7c0.8,1.4,1.4,2.9,1.9,4.5"></path>
+            <path class="icon-4-1 fill-none stroke-gray-400" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" d="M76.8,48c9.7-1.8,19.3,1.7,25.4,8.6"></path>
+            <path class="icon-4-1 fill-none stroke-gray-400" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M72.2,41.2C74.6,23.3,62.6,6.4,44.6,3C26-0.6,8,11.7,4.5,30.3c-1.8,9.6,0.6,19,5.8,26.4L5.3,71.8l16.1-5.2 c3.2,1.8,6.7,3.1,10.4,3.8c5.5,1,10.9,0.7,15.9-0.8">
+            </path>
+            <path class="icon-4-3 fill-gray-400" opacity="0.5"
+              d="M74.3,50.5c18.6-3.5,36.6,8.7,40.1,27.3c1.8,9.6-0.6,19-5.8,26.4l5.1,15.1l-16.1-5.2c-3.2,1.8-6.7,3.1-10.4,3.8 c-18.6,3.5-36.6-8.7-40.1-27.3C43.4,72,55.7,54.1,74.3,50.5z">
+            </path>
+            <path class="icon-4-4 fill-primary"
+              d="M75.4,40.4c18.6-3.5,36.6,8.7,40.1,27.3c1.8,9.6-0.6,19-5.8,26.4l5.1,15.1l-16.1-5.2c-3.2,1.8-6.7,3.1-10.4,3.8 c-18.6,3.5-36.6-8.7-40.1-27.3C44.5,61.9,56.8,44,75.4,40.4z">
+            </path>
+            <circle class="icon-4-2 fill-none stroke-white" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" cx="95" cy="74.5" r="2.8"></circle>
+            <circle class="icon-4-2 fill-none stroke-white" opacity="0.5" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" cx="81.8" cy="74.5" r="2.8"></circle>
+            <circle class="icon-4-2 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" cx="68.6" cy="74.5" r="2.8"></circle>
+          </svg>
+                    <div class="media-body">
+                        <div class="b h5 font-weight-semi-bold">Chia sẻ</div>
+                        <p class="text-muted font-weight-medium">Khám phá, theo dõi và thảo luận về các chủ đề bạn quan tâm</p>
+                    </div>
+                </div>
+                <div class="mb-4 media"><svg x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve" class="mr-4 svg" style="width: 50px; height: 50px;">
+            <style type="text/css">
+              .icon-24-0 {
+                fill: none;
+                stroke: #BDC5D1;
+              }
+
+              .icon-24-1 {
+                fill: #377DFF;
+              }
+
+              .icon-24-2 {
+                fill: none;
+                stroke: #377DFF;
+              }
+
+              .icon-24-3 {
+                fill: none;
+                stroke: #FFFFFF;
+              }
+
+              .icon-24-4 {
+                fill: #BDC5D1;
+              }
+            </style>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="99.8" y1="26.9" x2="106.5" y2="24.1"></line>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="47.1" y1="26.9" x2="40.4" y2="24.1"></line>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="99.8" y1="48.7" x2="106.5" y2="51.5"></line>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="47.1" y1="48.7" x2="40.4" y2="51.5"></line>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="84.4" y1="11.5" x2="87.1" y2="4.8"></line>
+            </g>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="59.8" y1="4.8" x2="62.5" y2="11.5"></line>
+            </g>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="48.2" y1="12.5" x2="53.3" y2="17.6"></line>
+            </g>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="98.7" y1="12.5" x2="93.6" y2="17.6"></line>
+            </g>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="48.2" y1="63.1" x2="53.3" y2="58"></line>
+            <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="98.7" y1="63.1" x2="93.6" y2="58"></line>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="73.5" y1="2.1" x2="73.5" y2="9.3"></line>
+            </g>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="102" y1="37.8" x2="109.2" y2="37.8"></line>
+            </g>
+            <g>
+              <line class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="37.7" y1="37.8" x2="45" y2="37.8"></line>
+            </g>
+            <path class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M84.3,96.7l17.3-4.7c2.1-0.6,4.3,0.6,5,2.7l0,0c0.6,1.9-0.2,4.1-2.1,5L71,116.5c-3.7,1.8-8,2-11.7,0.4 l-18.6-7.9h-9.4">
+            </path>
+            <path class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M31.2,82.5h9.4l19.8,6.1h11.6c2.7,0,4.9,2.2,4.9,4.9l0,0c0,2.5-2,4.5-4.5,4.5h-12c-2.6,0-4.7,2.1-4.7,4.7l0,0">
+            </path>
+            <path class="icon-24-1 fill-primary"
+              d="M12.2,112.3h17.6c0.8,0,1.4-0.6,1.4-1.4V80.6c0-0.8-0.6-1.4-1.4-1.4H12.2c-0.8,0-1.4,0.6-1.4,1.4v30.3 C10.8,111.6,11.4,112.3,12.2,112.3z">
+            </path>
+            <path class="icon-24-0 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              d="M84.1,62.6v-7.8c5.7-3.6,9.5-9.8,9.5-17c0-11.1-9-20.1-20.1-20.1c-11.1,0-20.1,9-20.1,20.1 c0,7.2,3.8,13.5,9.5,17v7.8">
+            </path>
+            <line class="icon-24-2 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="73.5" y1="55.4" x2="73.5" y2="69.7"></line>
+            <line class="icon-24-2 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="84.1" y1="69.7" x2="62.8" y2="69.7"></line>
+            <line class="icon-24-2 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="68.4" y1="77.9" x2="78.5" y2="77.9"></line>
+            <line class="icon-24-3 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="21.8" y1="85.7" x2="21.8" y2="88.8"></line>
+            <circle class="icon-24-4 fill-gray-400" opacity="0.5" cx="76.8" cy="40.8" r="10.6"></circle>
+            <circle class="icon-24-1 fill-primary" cx="73.2" cy="36.7" r="10.6"></circle>
+            <line class="icon-24-3 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="73.2" y1="41.7" x2="73.2" y2="39.7"></line>
+            <line class="icon-24-3 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10" x1="73.2" y1="34.1" x2="73.2" y2="34.1"></line>
+          </svg>
+                    <div class="media-body">
+                        <div class="b h5 font-weight-semi-bold">Kết giao</div>
+                        <p class="text-muted font-weight-medium">Tham gia và giao lưu với một cộng đồng cực kỳ yêu động vật.</p>
+                    </div>
+                </div>
+                <div class="mb-4 media"><svg x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve" class="mr-4 svg" style="width: 50px; height: 50px;">
+            <style type="text/css">
+              .icon-7-0 {
+                fill: none;
+                stroke: #FFFFFF;
+              }
+
+              .icon-7-1 {
+                fill: #BDC5D1;
+              }
+
+              .icon-7-2 {
+                fill: #377DFF;
+              }
+
+              .icon-7-3 {
+                fill: none;
+                stroke: #BDC5D1;
+              }
+
+              .icon-7-4 {
+                fill: none;
+                stroke: #377DFF;
+              }
+            </style>
+            <path class="icon-7-1 fill-gray-400" opacity="0.5"
+              d="M112.1,8.4H22.7c-3.4,0-6.1,2.8-6.1,6.1v23.4c0,3.4,2.8,6.1,6.1,6.1h5.1v10l15.7-10h13.6l10.3,10.3L77.8,44 h13.6L107,54V44h5.1c3.4,0,6.1-2.8,6.1-6.1V14.5C118.2,11.1,115.5,8.4,112.1,8.4z">
+            </path>
+            <path class="icon-7-2 fill-primary"
+              d="M104.7,2.6H15.3c-3.4,0-6.1,2.8-6.1,6.1v23.4c0,3.4,2.8,6.1,6.1,6.1h5.1v10l15.7-10h13.6L60,48.6l10.3-10.3 h13.6l15.7,10v-10h5.1c3.4,0,6.1-2.8,6.1-6.1V8.7C110.8,5.4,108.1,2.6,104.7,2.6z">
+            </path>
+            <g>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M106.4,76.8c0.4-1.2,0.6-2.6,0.6-3.9c0-6.6-4.7-11.5-10.5-11.5c-5.8,0-10.5,4.9-10.5,11.5 c0,1.4,0.2,2.7,0.6,3.9c-0.8,0.5-1.4,1.5-1.4,2.6c0,1.4,0.9,2.6,2.2,3c1.5,4.5,5,7.7,9.1,7.7c4.1,0,7.6-3.2,9.1-7.7 c1.3-0.4,2.2-1.5,2.2-3C107.7,78.3,107.2,77.4,106.4,76.8z">
+              </path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M101.6,71l-0.5-2.6c0,0-1.1,0-2.9,1.6c-3.7,3.4-7.9,0.7-7.9,0.7"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M86.5,74.8"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M105.6,95.9l10,4.2c1.9,0.9,2.6,2.8,2.6,4.7v0.4v6.8">
+              </path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="96.6,97.4 100.4,101.8 105.6,96.1 103.4,92.2  ">
+              </polyline>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M87.5,95.9l-9.8,4c-0.6,0.4-1.1,0.9-1.6,1.5c-0.7,0.9-1,2-1,3.2v7.4"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M87,80.4"></path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="96.6,97.4 92.7,101.8 87.5,96.1 89.7,92.2  ">
+              </polyline>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="103.4" y1="92.2" x2="96.6" y2="97.4"></line>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="89.7" y1="92.2" x2="96.6" y2="97.4"></line>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M118.2,112c-6.1,3.4-13.5,5.4-21.5,5.4c-8,0-15.4-2-21.5-5.4"></path>
+            </g>
+            <g>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M69.7,70.2c0.4-1.2,0.6-2.6,0.6-3.9c0-6.6-4.7-11.5-10.5-11.5c-5.8,0-10.5,4.9-10.5,11.5 c0,1.4,0.2,2.7,0.6,3.9c-0.8,0.5-1.4,1.5-1.4,2.6c0,1.4,0.9,2.6,2.2,3c1.5,4.5,5,7.7,9.1,7.7c4.1,0,7.6-3.2,9.1-7.7 c1.3-0.4,2.2-1.5,2.2-3C71.1,71.7,70.5,70.7,69.7,70.2z">
+              </path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M65,64.4l-0.5-2.6c0,0-1.1,0-2.9,1.6c-3.7,3.4-7.9,0.7-7.9,0.7"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M49.9,68.2"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M68.9,89.3l10,4.2c1.9,0.9,2.6,2.8,2.6,4.7"></path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="59.9,90.8 63.8,95.1 69,89.5 66.7,85.6  ">
+              </polyline>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M50.9,89.3l-9.8,4c-0.6,0.4-1.1,0.9-1.6,1.5c-0.7,0.9-1,2-1,3.2"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M50.3,73.8"></path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="59.9,90.8 56,95.1 50.8,89.5 53.1,85.6  ">
+              </polyline>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="66.7" y1="85.6" x2="59.9" y2="90.8"></line>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="53.1" y1="85.6" x2="59.9" y2="90.8"></line>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M75.2,108.2c-4.6,1.6-9.8,2.5-15.2,2.5c-5.5,0-10.6-0.9-15.3-2.6"></path>
+            </g>
+            <g>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M33,76.8c0.4-1.2,0.6-2.6,0.6-3.9c0-6.6-4.7-11.5-10.5-11.5c-5.8,0-10.5,4.9-10.5,11.5c0,1.4,0.2,2.7,0.6,3.9 c-0.8,0.5-1.4,1.5-1.4,2.6c0,1.4,0.9,2.6,2.2,3c1.5,4.5,5,7.7,9.1,7.7c4.1,0,7.6-3.2,9.1-7.7c1.3-0.4,2.2-1.5,2.2-3 C34.4,78.3,33.8,77.4,33,76.8z">
+              </path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M28.3,71l-0.5-2.6c0,0-1.1,0-2.9,1.6c-3.7,3.4-7.9,0.7-7.9,0.7"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M13.2,74.8"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M32.2,95.9l10,4.2c1.9,0.9,2.6,2.8,2.6,4.7v0.4v6.8">
+              </path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="23.2,97.4 27.1,101.8 32.3,96.1 30.1,92.2  ">
+              </polyline>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M14.2,95.9l-9.8,4c-0.6,0.4-1.1,0.9-1.6,1.5c-0.7,0.9-1,2-1,3.2v7.4"></path>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" d="M13.6,80.4"></path>
+              <polyline class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="23.2,97.4 19.4,101.8 14.2,96.1 16.4,92.2  ">
+              </polyline>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="30.1" y1="92.2" x2="23.2" y2="97.4"></line>
+              <line class="icon-7-4 fill-none stroke-primary" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" x1="16.4" y1="92.2" x2="23.2" y2="97.4"></line>
+              <path class="icon-7-3 fill-none stroke-gray-400" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10"
+                d="M44.8,112c-6.1,3.4-13.5,5.4-21.5,5.4c-8,0-15.4-2-21.5-5.4"></path>
+            </g>
+            <polygon class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" stroke-miterlimit="10"
+              points="60.4,9.1 49.2,25.8 59.5,25.8 58.1,37 70.8,20 59.5,20 "></polygon>
+            <g opacity="0.5">
+              <g>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="81.6" y1="14.6" x2="96.7" y2="14.6"></line>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="81.6" y1="21.2" x2="96.7" y2="21.2"></line>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="81.6" y1="27.8" x2="87.8" y2="27.8"></line>
+              </g>
+              <g>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="23.3" y1="14.6" x2="38.4" y2="14.6"></line>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="23.3" y1="21.2" x2="38.4" y2="21.2"></line>
+                <line class="icon-7-0 fill-none stroke-white" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-miterlimit="10" x1="23.3" y1="27.8" x2="29.5" y2="27.8"></line>
+              </g>
+            </g>
+          </svg>
+                    <div class="media-body">
+                        <div class="b h5 font-weight-semi-bold">Cá nhân hóa</div>
+                        <p class="text-muted font-weight-medium">Tạo profile của chính bạn và thú cưng</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 overflow-auto">
+                <div id="feature-imgs">
+                    <img alt="She loves dog" class="w-100 mb-5 rounded" src="./assets/img/hero_image_01.png">
+
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="alert alert-primary py-5 text-center">
+                    <h3 class="h3 font-weight-bold d-inline text-secondary mr-1 mb-0">7.000+</h3><span>boss và<span
+              class="h3 font-weight-bold mx-1 text-secondary">3.000+</span>sen đang tham gia</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="alert alert-primary py-5 text-center">
+                    <h3 class="h3 font-weight-bold d-inline text-secondary mr-1 mb-0">7.000+</h3><span>boss và<span
+              class="h3 font-weight-bold mx-1 text-secondary">3.000+</span>sen đang tham gia</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end -->
+    <!-- sản phẩm -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class=" text-primary  home__title m-space--small">Thú cưng nổi bật</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/138558962_1878620772285998_6055239838105162140_o-270x270.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">ALASKA HỒNG PHẤN </h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">18.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Hồ Chí Minh</span></div><span class="date">18 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/pet3.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">MÈO TAI CỤP BÉO MÚP </h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">20.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Đà nẵng</span></div><span class="date">4 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/pet2.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">GOLDEN CƯNG SIÊU CẤP</h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">12.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Hà Nội</span></div><span class="date">17 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/pet4.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">MÈO CHÂN NGẮN,TAI CỤP</h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">30.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Hà Nội</span></div><span class="date">17 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/pet5.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">MÈO TAI CỤP</h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">20.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Hà Nội</span></div><span class="date">17 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6  pt-3">
+                        <div class="petcard__content">
+                            <div class="pet-card">
+                                <div class="petcard-setion">
+                                    <div class="pet-card-img">
+                                        <figure class="snip1220">
+                                            <img src="./assets/img/pet6.jpg" alt="sample87" />
+                                            <figcaption>
+
+                                                <ul class="list-checked">
+                                                    <li><i class="fas fa-check"></i>Tên khác: Alaska Malamute</li>
+                                                    <li><i class="fas fa-check"></i>Nguồn gốc: Hoa Kỳ</li>
+                                                    <li><i class="fas fa-check"></i>Phân loại: Chó kéo xe</li>
+                                                    <li><i class="fas fa-check"></i>Cân nặng: 32-43kg</li>
+                                                    <li><i class="fas fa-check"></i>Tuổi thọ: 10-12 năm</li>
+                                                </ul>
+                                                <!-- <a href="#" class="read-more">Chi tiết</a> -->
+                                                <div class="button_bottom">
+                                                    <button class="btn-muahang "><span>Mua hàng</span></button>
+                                                    <button class="btn-muahang btn-chitiet"><span>Chi tiết</span></button>
+
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="pet-card-content">
+                                        <h4 class="h4__heading">PHỐC SÓC SIÊU CUTE</h4>
+                                        <div class="pet-card-act__details">
+                                            <h5 class="h5__heading">25.000.000đ</span>
+                                            </h5>
+                                            <div class="bottom-wrap">
+                                                <div class="location-wrap"><span class="location-name"><i class="fas fa-map-marker-alt"></i>
+                            TP.Hà Nội</span></div><span class="date">17 giờ
+                          trước</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <!-- end -->
+    <div class="container pt-3 section_tienich">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mb-3">
+                <h3 class="text-primary font-weight-semi-bold mb-0 mt-3 text-center">Pety dùng công nghệ để mang lại nhiều tiện ích cho quá trình chăm sóc thú cưng của bạn</h3>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="card border-0 bg-light shadow-sm h-100 overflow-hidden p-6">
+                    <div class="position-absolute">
+                        <img class=" img_tienich" src="./assets/img/img_1.png" alt="">
+                    </div>
+                    <div class="w-75 pr-2 z-index-2">
+                        <p><b>Tìm phòng khám</b> gần nhất với review tin cậy từ cộng đồng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="card border-0 bg-light shadow-sm h-100 overflow-hidden p-6">
+                    <div class="position-absolute">
+                        <img class=" img_tienich" src="./assets/img/img_2.png" alt="">
+                    </div>
+                    <div class="w-75 pr-2 z-index-2">
+                        <p><b>Dịch vụ spa hay trông giữ mua sắm sản phẩm</b> dịch vụ chăm sóc thú cưng.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="card border-0 bg-light shadow-sm h-100 overflow-hidden p-6">
+                    <div class="position-absolute">
+                        <img class=" img_tienich" src="./assets/img/img_3.png" alt="">
+                    </div>
+                    <div class="w-75 pr-2 z-index-2">
+                        <p><b>Đặt lịch hẹn</b> khám - chữa bệnh dành cho thú cưng mỗi ngày</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="card border-0 bg-light shadow-sm h-100 overflow-hidden p-6">
+                    <div class="position-absolute">
+                        <img class=" img_tienich" src="./assets/img/img_4.png" alt="">
+                    </div>
+                    <div class="w-75 pr-2 z-index-2">
+                        <p><b>Tra cứu thông tin</b> chính xác, nhanh chóng thông qua app thú cưng.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="heading-section mb-5 mt-5 mt-lg-0">
+                    <h2 class="mb-3 text-primary ">Câu hỏi thường gặp </h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="accordion" id="faq">
+                    <div class="card">
+                        <div class="card-header" id="faqhead1">
+                            <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1"><i class="fas fa-paw"></i> Làm thế nào để huấn luyện chó cưng của bạn?</a>
+                        </div>
+
+                        <div id="faq1" class="collapse show" aria-labelledby="faqhead1" data-parent="#faq">
+                            <div class="card-body py-3 px-0">
+                                <ol>
+                                    <li> Xa xa, sau núi chữ </li>
+                                    <li> Consonantia, tồn tại những văn bản mù mịt </li>
+                                    <li> Khi cô ấy đến những ngọn đồi đầu tiên của Dãy núi nghiêng </li>
+                                    <li> Đánh dấu trang, tiêu đề của Làng bảng chữ cái </li>
+                                    <li> Tách ra, họ sống trong Bookmarksgrove right </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqhead2">
+                            <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2" aria-expanded="true" aria-controls="faq2"><i class="fas fa-paw"></i> Làm thế nào để quản lý vật nuôi của
+                bạn?</a>
+                        </div>
+
+                        <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
+                            <div class="card-body">
+                                <ol>
+                                    <li> Xa xa, sau núi chữ </li>
+                                    <li> Consonantia, tồn tại những văn bản mù mịt </li>
+                                    <li> Khi cô ấy đến những ngọn đồi đầu tiên của Dãy núi nghiêng </li>
+                                    <li> Đánh dấu trang, tiêu đề của Làng bảng chữ cái </li>
+                                    <li> Tách ra, họ sống trong Bookmarksgrove right </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqhead3">
+                            <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3" aria-expanded="true" aria-controls="faq3"><i class="fas fa-paw"></i> Cách chải chuốt tốt nhất cho vật
+                nuôi của bạn là gì?</a>
+                        </div>
+
+                        <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
+                            <div class="card-body">
+                                <ol>
+                                    <li> Xa xa, sau núi chữ </li>
+                                    <li> Consonantia, tồn tại những văn bản mù mịt </li>
+                                    <li> Khi cô ấy đến những ngọn đồi đầu tiên của Dãy núi nghiêng </li>
+                                    <li> Đánh dấu trang, tiêu đề của Làng bảng chữ cái </li>
+                                    <li> Tách ra, họ sống trong Bookmarksgrove right </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="w-100 rounded" src="./assets/img/about.jpg" alt="">
+                <div class="d-flex mt-3">
+                    <div class="img img-2 mr-md-2"><img class="w-100 rounded" src="./assets/img/about-2.jpg" alt=""></div>
+                    <div class="img img-2 ml-md-2"><img class="w-100 rounded" src="./assets/img/about-3.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-3">
+        <div class="card shadow-none bg-soft-warning text-inherit transition-3d-hover p-4 p-md-7">
+            <div class="row">
+                <div class="col-lg-4 order-lg-2 mb-5 mb-lg-0">
+                    <div class="d-flex flex-column h-100">
+                        <div class="mb-7">
+                            <h2 class="text-primary font-weight-semi-bold mb-3">Blog kiến thức</h2>
+                            <p class="text-body">Được Pety biên tập tỉ mỉ, hữu ích cho cả các bạn mới nuôi và những bạn đã nuôi thú cưng từ rất lâu...</p>
+                        </div>
+                        <div class="card shadow-none p-3 text-right">
+                            <div class="mb-3"><img src="./assets/img/award2012.66cec5fb.png" alt="Award" style="width: 80px; margin-top: -60px;"></div>
+                            <div class="mb-3 text-left">
+                                <blockquote class="text-dark">"Tôi nhận ra rằng mỗi khi tôi mất một chú chó, nó mang đi theo một mảnh tim tôi, và mỗi chú chó mới đến với tôi lại tặng tôi một mảnh tim mình. Nếu tôi sống đủ lâu, tất cả tim tôi sẽ trở thành chúng, đầy yêu thương như
+                                    chúng."
+                                </blockquote>
+                            </div>
+                            <div class="media">
+                                <div class="avatar avatar-circle mr-3">
+                                    <a href="#">
+                                        <div class="avatar avatar-2xl "><img class="rounded-circle w-50" src="./assets/img/avatar-6.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="media-body text-left"><a class="d-block mb-0" href="#!">– Khuyết danh</a><small class="d-block text-muted">Bác sĩ Thú y ở tp.HCM</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 order-lg-1">
+                    <div class="mb-5"><img alt="cat cover" class="rounded w-100" style="object-fit: cover;" src="./assets/img/hero_home_01.jpg">
+                        <div class="bt_bb_image">
+                            <span><img class="vert-move" src="./assets/img/inner_product_3.png"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <h3 class="h4"><a class="text-primary" href="#">Bệnh Viêm Đường Ruột Ở Chó Mèo Bạn Nên
+              Biết!</a></h3>
+                    <p class="text-body">
+                        Nếu hôm nay bạn thấy người bạn thân của mình “uống nước thay cơm”, đi liêu xiêu hoặc nằm bẹp một chỗ thì khả năng cao bé đang bị vấn đề tiêu hóa rồi đấy!</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="h4"><a class="text-primary" href="#">Trạm Cứu Hộ Chó Mèo</a></h3>
+                    <p class="text-body">Mỗi ngày có rất nhiều động vật, đặc biệt là chó mèo bị bỏ rơi, bạo hành. Và cũng có rất nhiều những tấm lòng nhân ái từ các cá nhân, các nhóm, các trạm cứu trợ động vật đang hoạt động tích cực để trợ giúp trên cả nước.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="h4"><a class="text-primary" href="#">Chương trình gây quỹ ủng hộ trạm cứu hộ Sài
+              Gòn Time</a></h3>
+                    <p class="text-body">Tối ngày 17/01 vừa qua, Pety đã có mặt để tham gia một buổi Talk Show đặc biệt mang tên NEED. Đây là một chương trình gây quỹ hỗ trợ cho các bé chó mèo trạm cứu hộ Sài Gòn time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="container pt-5">
+        <div class="vc_row wpb_row footer-top">
+            <div class="wpb_column column_container col-lg-12">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="s7upf-slider adv-footer-slider ">
+                            <div class="wrap-item sv-slider owl-carousel owl-theme">
+                                <div class="owl-wrapper-outer">
+                                    <div class="owl-wrapper">
+                                        <div class="owl-item active">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog1.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Jack Russel</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog2.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Parson Russel</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active ">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog3.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Golden Retriever</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active f-1">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog4.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Yorkie</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active f-1">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog5.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Bull Pháp</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active f-1">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog6.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Bull Pháp</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active f-1">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog7.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">Beagle</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active f-1">
+                                            <div class="item-adv-footer  ">
+                                                <a href="#" class="wobble-horizontal"><img width="150" src="./assets/img/dog8.png" class="attachment-full size-full" alt="" scale="0"></a>
+                                                <div class="info-adv-footer">
+                                                    <h3 class="title18">PUG</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-lg-3">
+                <img class="w-100" src="./assets/img/logo_orange1.png" alt="">
+                <p class="slogan">Mang tình yêu thú cưng đến mỗi gia đình.</p>
+                <div class="socialbtns">
+                    <ul>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <h2 class="text-primary">Liên lạc</h2>
+                <ul class="lien_lac">
+                    <li><i class="fas fa-map-marker-alt"></i>183 Quách Thị Trang - Đà Nẵng</li>
+                    <li><i class="fas fa-phone-volume"></i>0123456789</li>
+                    <li><i class="far fa-clock"></i>T2 - T7: 8AM - 8PM</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-3  col-sm-4">
+                <h2 class="text-primary">Dịch vụ</h2>
+                <ul class="lien_lac">
+                    <li><i class="fas fa-paw"></i>Các dịch vụ cho chó</li>
+                    <li><i class="fas fa-paw"></i>Các dịch vụ cho mèo</li>
+                    <li><i class="fas fa-paw"></i>Dịch vụ Spa và Chải lông</li>
+                </ul>
+            </div>
+            <div class="col-lg-3  col-sm-4">
+                <h2 class="text-primary">Liên hệ</h2>
+                <div class="btNewsletter">
+                    <input type="email" class="form-control" placeholder="Nhập Email của bạn...">
+                    <button type="submit" class="btn btn-primary">Gửi đi</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 footer-bottom copyright">
+        <div class="container  ">
+            <div class="row">
+                <div class="col-md-12 copy-right">
+                    <p style="margin-bottom: -2px;">© Copyright 2020 <a href="#" style=" color: #000;">Pet Shop</a>. All Right Reserved. <br> Interface designed by <a href="#" target="_blank" style=" color: #000;" rel="noopener noreferrer">Green House</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+</script>
+<script>
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+    $('.vertical-menu-mobile').hide();
+    $(".sub-menu-vertical a").click(function() {
+        $(this).parent(".sub-menu-vertical").children(".vertical-menu-mobile").slideToggle("100");
+        $(this).find(".right").toggleClass("fa-caret-right fa-caret-down");
+    });
+</script>
+
+</html>
